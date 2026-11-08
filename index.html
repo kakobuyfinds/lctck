@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Wemimi spreadsheet — kategorie, rozmiary i poradnik QC</title>
+<meta name="description" content="Wemimi spreadsheet po polsku: odkrywaj kategorie, porównuj wymiary i zdjęcia QC oraz sprawdzaj pełny koszt zakupu. Przeglądaj katalog HipobuyFind.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#2449dc">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Wemimi spreadsheet — mniej zgadywania, lepsze porównania">
+<meta property="og:description" content="Polski przewodnik po kategoriach, wymiarach, zdjęciach QC i kosztach dostawy. Odkrywaj produkty na HipobuyFind.">
+<meta property="og:image" content="https://nikeclprod.vtexassets.com/arquivos/ids/160793/CW2288_111_A_PREM.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wemimi spreadsheet — polski przewodnik zakupowy">
+<meta name="twitter:description" content="Kategorie, rozmiary, zdjęcia QC i pełny koszt zakupu w jednym przewodniku.">
+<meta name="twitter:image" content="https://nikeclprod.vtexassets.com/arquivos/ids/160793/CW2288_111_A_PREM.jpg">
+<link rel="preconnect" href="https://nikeclprod.vtexassets.com" crossorigin>
+<!-- Po wdrożeniu dodaj canonical i og:url z rzeczywistym adresem tej strony. -->
+<style>
+:root {
+  --paper: #f7f5ef;
+  --ink: #20251f;
+  --muted: #5a6057;
+  --blue: #2449dc;
+  --line: #d8dacf;
+  --white: #fff;
+  --lime: #e5ef9a;
+  --radius: 20px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 5px;
+}
+a:hover { text-decoration: underline; text-underline-offset: 5px; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, figure { margin: 0; }
+h1, h2, h3 { line-height: 1.12; letter-spacing: -.035em; }
+h1 { font-size: clamp(2.8rem, 6.2vw, 5.8rem); font-weight: 750; }
+h2 { font-size: clamp(1.9rem, 3.8vw, 3.1rem); }
+h3 { font-size: 1.35rem; }
+p + p { margin-top: 1rem; }
+.wrap { max-width: 1240px; margin: auto; padding-inline: 28px; }
+.skip {
+  position: absolute;
+  left: 15px;
+  top: -90px;
+  background: var(--white);
+  padding: 12px;
+  z-index: 10;
+}
+.skip:focus { top: 15px; }
+.top { border-bottom: 1px solid var(--line); }
+.top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 88px;
+}
+.brand { font-size: 1.22rem; letter-spacing: -.045em; font-weight: 800; }
+.brand span { color: var(--blue); }
+.top-note { font-size: .8rem; text-align: right; color: var(--muted); }
+.eyebrow {
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-weight: 750;
+  color: var(--blue);
+}
+.intro {
+  padding: 28px 0 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.intro p { font-size: .9rem; color: var(--muted); }
+.categories {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.category {
+  padding: 17px 15px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  transition: background .15s;
+}
+.category:hover { background: var(--lime); text-decoration: none; }
+.category strong { font-size: .9rem; font-weight: 650; }
+.category small { display: block; color: var(--muted); font-size: .73rem; }
+.category span { color: var(--blue); }
+.hero {
+  padding: 54px 0 64px;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+.hero .eyebrow { margin-bottom: 20px; }
+.hero h1 em { font-style: normal; color: var(--blue); }
+.lead { font-size: 1.08rem; color: var(--muted); max-width: 54ch; margin-top: 24px; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  background: var(--blue);
+  color: var(--white);
+  padding: 14px 23px;
+  border-radius: 999px;
+  font-weight: 650;
+  margin-top: 26px;
+}
+.button:hover { background: #1637bb; text-decoration: none; }
+.micro { font-size: .78rem; color: var(--muted); margin-top: 16px; }
+.hero-art {
+  background: #e9edfc;
+  border-radius: var(--radius);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-art .number { font-size: .76rem; color: var(--blue); letter-spacing: .12em; }
+.hero-art img {
+  width: 100%;
+  aspect-ratio: 1.2;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.hero-art figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #c9d0ed;
+  padding-top: 16px;
+  font-size: .85rem;
+}
+.strip { background: var(--ink); color: white; padding: 25px 0; }
+.strip .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.strip b { color: var(--lime); display: block; font-size: .78rem; letter-spacing: .1em; }
+.strip p { font-size: .92rem; margin-top: 4px; }
+.section { padding-top: 70px; padding-bottom: 4px; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 28px;
+}
+.section-head p { max-width: 40ch; color: var(--muted); font-size: .94rem; }
+.section-head .eyebrow { margin-bottom: 12px; }
+.gallery { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 18px; }
+.visual {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.visual img { width: 100%; height: 300px; object-fit: contain; background: #fbfbfb; }
+.visual:first-child img { object-fit: cover; object-position: center 35%; }
+.visual figcaption { padding: 22px; }
+.visual h3 { margin-bottom: 10px; }
+.visual p { font-size: .88rem; color: var(--muted); }
+.visual a {
+  display: inline-block;
+  color: var(--blue);
+  font-size: .88rem;
+  font-weight: 650;
+  margin-top: 14px;
+}
+.callout { margin-top: 20px; font-size: .8rem; color: var(--muted); }
+.reading { display: grid; grid-template-columns: 240px 1fr; gap: 50px; }
+.reading aside { padding-top: 5px; }
+.reading aside p { margin-top: 18px; color: var(--muted); font-size: .92rem; }
+.articles { border-top: 1px solid var(--line); }
+.article { padding: 28px 0; border-bottom: 1px solid var(--line); }
+.article-label {
+  font-size: .74rem;
+  color: var(--blue);
+  font-weight: 700;
+  letter-spacing: .1em;
+  display: block;
+  margin-bottom: 12px;
+}
+.article h3 { font-size: 1.65rem; margin-bottom: 16px; }
+.article p { color: var(--muted); }
+.article ul { padding-left: 22px; margin: 15px 0 0; }
+.article li { margin: 7px 0; }
+.table-shell {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+  text-align: left;
+  font-size: .92rem;
+}
+caption { text-align: left; padding: 20px 22px; font-weight: 700; background: var(--lime); }
+th, td { padding: 17px 22px; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { color: var(--blue); font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; }
+tbody th { font-weight: 650; width: 24%; }
+tbody tr:last-child > * { border-bottom: 0; }
+.faq-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 60px; }
+.faq-grid .eyebrow { margin-bottom: 14px; }
+details { border-bottom: 1px solid var(--line); padding: 19px 0; }
+details:first-child { border-top: 1px solid var(--line); }
+summary { font-size: 1.03rem; font-weight: 650; cursor: pointer; padding-right: 15px; }
+details p { margin-top: 14px; color: var(--muted); font-size: .95rem; }
+.final-cta {
+  margin-top: 70px;
+  border-radius: var(--radius);
+  background: var(--lime);
+  padding: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.final-cta h2 { font-size: 2rem; }
+.final-cta p { margin-top: 12px; max-width: 58ch; }
+.final-cta .button { margin: 0; flex-shrink: 0; }
+footer { margin-top: 60px; padding: 28px 0 36px; border-top: 1px solid var(--line); }
+.footer-grid { display: flex; justify-content: space-between; gap: 50px; }
+footer p { font-size: .8rem; color: var(--muted); max-width: 76ch; }
+footer .brand { white-space: nowrap; }
+.editorial { margin-top: 18px; font-size: .75rem; }
+@media (min-width: 1000px) {
+  .section { content-visibility: auto; contain-intrinsic-size: auto 650px; }
+}
+@media (max-width: 950px) {
+  .categories { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hero { gap: 28px; }
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .visual img { height: 230px; }
+  .reading { grid-template-columns: 190px 1fr; gap: 28px; }
+  .faq-grid { gap: 30px; }
+}
+@media (max-width: 680px) {
+  .wrap { padding-inline: 20px; }
+  .top-inner { min-height: 74px; gap: 10px; }
+  .brand { font-size: 1.08rem; }
+  .top-note { font-size: .67rem; }
+  .intro { display: block; padding-top: 23px; }
+  .intro p { margin-top: 5px; }
+  .categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .category { padding: 13px 11px; }
+  .category strong { font-size: .85rem; }
+  .hero { grid-template-columns: 1fr; padding: 38px 0; gap: 30px; }
+  .hero h1 { font-size: 3.15rem; }
+  .hero-art { padding: 18px; }
+  .hero-art img { aspect-ratio: 1.4; }
+  .strip .wrap { grid-template-columns: 1fr; gap: 17px; }
+  .section { padding-top: 48px; }
+  .section-head { display: block; }
+  .section-head p { margin-top: 16px; }
+  .gallery { grid-template-columns: 1fr; }
+  .visual { display: grid; grid-template-columns: 42% 1fr; align-items: center; }
+  .visual img { height: 240px; }
+  .visual figcaption { padding: 17px; }
+  .visual h3 { font-size: 1.2rem; }
+  .reading, .faq-grid { grid-template-columns: 1fr; gap: 25px; }
+  .reading aside p { margin-top: 12px; }
+  .article h3 { font-size: 1.45rem; }
+  .final-cta { display: block; padding: 27px; margin-top: 45px; }
+  .final-cta .button { margin-top: 22px; }
+  .footer-grid { display: block; }
+  footer .brand { display: inline-block; margin-bottom: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Wemimi spreadsheet — kategorie, rozmiary i poradnik QC",
+      "inLanguage": "pl",
+      "description": "Niezależny polski przewodnik po kategoriach produktów, wymiarach, zdjęciach QC i kosztach dostawy.",
+      "about": {
+        "@type": "Thing",
+        "name": "Wemimi spreadsheet"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Jak porównywać produkty: rozmiar, zdjęcia i koszt dostawy",
+      "inLanguage": "pl",
+      "description": "Trzy poradniki o zapisywaniu wariantu, sprawdzaniu zdjęć QC i szacowaniu kosztu zakupu.",
+      "articleSection": "Poradniki zakupowe"
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "pl",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Co oznacza Wemimi spreadsheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To hasło używane przy wyszukiwaniu uporządkowanych list produktów i linków. Ta strona jest niezależnym przewodnikiem po porównywaniu ofert; nie udostępnia pliku Excel ani Arkusza Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dokąd prowadzą odnośniki na tej stronie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Odnośniki kategorii otwierają odpowiednie działy na hipobuyfind.com. Pozostałe odnośniki otwierają stronę główną www.hipobuyfind.com. Nie jest to strona zamówień Wemimi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak dobrać rozmiar butów i odzieży?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porównaj tabelę konkretnej oferty z własnymi pomiarami. Dla butów sprawdź długość stopy i zalecenia sprzedawcy; dla odzieży szerokość, długość oraz sposób wykonania pomiaru. Sama etykieta EU lub M nie wystarcza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy zdjęcia QC potwierdzają autentyczność?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. Zdjęcia QC pomagają ocenić widoczne cechy, stan i zgodność wariantu. Nie potwierdzają samodzielnie autentyczności, składu materiału ani trwałości produktu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak obliczyć pełny koszt dostawy do Polski?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zsumuj cenę wybranego wariantu, transport krajowy, opłaty usługi, pakowanie, przesyłkę międzynarodową i ewentualne podatki lub należności importowe. Sprawdź aktualną wycenę dla adresu docelowego i wymiarów paczki."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co zrobić, gdy link do produktu nie działa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wróć do kategorii i poszukaj produktu według modelu lub zdjęcia. Porównaj nową ofertę od początku: podobna fotografia nie oznacza tego samego sprzedawcy, wariantu ani jakości."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/lctck/">
+</head>
+<body>
+<a class="skip" href="https://www.hipobuyfind.com">Przejdź do katalogu HipobuyFind</a>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="https://www.hipobuyfind.com">hipobuyfind<span>.com</span></a>
+    <p class="top-note">NIEZALEŻNY PRZEWODNIK<br>Po polsku · moda i akcesoria</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="intro">
+      <p class="eyebrow">01 / Wybierz kierunek</p>
+      <p>Kategorie od razu pod ręką. Każda otwiera katalog HipobuyFind.</p>
+    </div>
+
+    <nav class="categories" aria-label="Kategorie produktów">
+      <a class="category" href="https://hipobuyfind.com/category-911-Shoes.html">
+        <div><strong>Buty</strong><small lang="en">Shoes</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">
+        <div><strong>Bluzy i swetry</strong><small lang="en">Hoodies/Sweaters</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-913-T-Shirts.html">
+        <div><strong>Koszulki</strong><small lang="en">T-Shirts</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-914-Jackets.html">
+        <div><strong>Kurtki</strong><small lang="en">Jackets</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">
+        <div><strong>Spodnie i szorty</strong><small lang="en">Pants/Shorts</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-916-Headwear.html">
+        <div><strong>Nakrycia głowy</strong><small lang="en">Headwear</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-917-Sets.html">
+        <div><strong>Komplety</strong><small lang="en">Sets</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">
+        <div><strong>Bielizna</strong><small lang="en">Underwear/underpants</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-919-Jersey.html">
+        <div><strong>Koszulki sportowe</strong><small lang="en">Jersey</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="category" href="https://hipobuyfind.com/category-920-Accessories.html">
+        <div><strong>Akcesoria</strong><small lang="en">Accessories</small></div>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </nav>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Notatnik świadomego wyboru</p>
+        <h1 id="page-title">Wemimi spreadsheet<span aria-hidden="true">.</span><br><em>Najpierw szczegóły.</em></h1>
+        <p class="lead">Dobry wybór zaczyna się od kategorii, konkretnego wariantu i kilku sprawdzonych wymiarów. Ten polski przewodnik pomaga uporządkować poszukiwania butów, ubrań i dodatków przed przejściem do katalogu HipobuyFind.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Otwórz katalog <span aria-hidden="true">↗</span></a>
+        <p class="micro">Niezależna publikacja. Bez oficjalnego powiązania z Wemimi ani prezentowanymi markami.</p>
+      </div>
+      <figure class="hero-art">
+        <div class="number">STUDIUM FORMY / 001</div>
+        <img
+          src="https://nikeclprod.vtexassets.com/arquivos/ids/160793/CW2288_111_A_PREM.jpg"
+          alt="Biały Nike Air Force 1 ’07 pokazany z boku, z białą podeszwą i logo Swoosh"
+          width="640"
+          height="640"
+          fetchpriority="high"
+          decoding="async">
+        <figcaption>
+          <span>Nike Air Force 1 ’07</span>
+          <span>Zdjęcie poglądowe</span>
+        </figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <div class="strip">
+    <div class="wrap">
+      <div><b>WARIANT</b><p>Zapisz model, kolor i rozmiar.</p></div>
+      <div><b>DOWÓD</b><p>Porównaj opis z aktualnymi zdjęciami.</p></div>
+      <div><b>KOSZT</b><p>Uwzględnij dostawę i opłaty.</p></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="section" aria-labelledby="inspirations">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">02 / Forma i detal</p>
+          <h2 id="inspirations">Trzy spojrzenia na dodatki.</h2>
+        </div>
+        <p>Zdjęcia pokazują kierunki stylistyczne. Nie stanowią potwierdzenia dostępności tych modeli w katalogu.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="visual">
+          <img
+            src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-denim-stamp-square-90--M98169_PM1_Worn%20view.png?hei=700&amp;wid=700"
+            alt="Stylizacja Louis Vuitton: niebieska czapka, różowa chusta z monogramem i pasiasty top"
+            width="700"
+            height="700"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            <h3>Louis Vuitton / warstwy</h3>
+            <p>Czapka i chusta zmieniają proporcje stylizacji. Sprawdź obwód, wymiary oraz sposób wiązania dodatku.</p>
+            <a href="https://www.hipobuyfind.com">Przeglądaj inspiracje ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="visual">
+          <img
+            src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg"
+            alt="Beżowo-brązowa czapka Gucci z wzorem GG i wygiętym daszkiem"
+            width="640"
+            height="640"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            <h3>Gucci / proporcje</h3>
+            <p>Porównaj wysokość korony, profil daszka i zakres regulacji. Sam wzór materiału nie opisuje dopasowania.</p>
+            <a href="https://www.hipobuyfind.com">Odkrywaj dodatki ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="visual">
+          <img
+            src="https://assets.christiandior.com/is/image/diorprod/B1583DVORSD301_E01-2?wid=640&amp;hei=640"
+            alt="Bransoletka Dior z łańcuszkiem w złotym kolorze, białymi koralikami i literami DIOR"
+            width="640"
+            height="640"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            <h3>Dior / mała skala</h3>
+            <p>Przy biżuterii liczą się długość, zapięcie i deklarowany skład. Zdjęcie nie wyjaśnia wszystkich właściwości materiału.</p>
+            <a href="https://www.hipobuyfind.com">Zobacz katalog ↗</a>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="callout">Nazwy Nike, Louis Vuitton, Gucci, Hermès i Dior służą identyfikacji marek i kontekstu stylizacji. Zdjęcia nie potwierdzają autentyczności produktów z zewnętrznych ofert.</p>
+    </section>
+
+    <section class="section reading" aria-labelledby="guides">
+      <aside>
+        <p class="eyebrow">03 / Poradniki</p>
+        <h2 id="guides">Od pomysłu do porównania.</h2>
+        <p>Wemimi finds, poradnik Wemimi, zdjęcia QC Wemimi i rozmiary Wemimi: cztery pomocne tematy przy budowaniu własnej listy produktów.</p>
+      </aside>
+
+      <div class="articles">
+        <article class="article">
+          <span class="article-label">PORADNIK 01 / LINKI I WARIANTY</span>
+          <h3>Wemimi finds: zapisuj ofertę, nie samo zdjęcie</h3>
+          <p>Wyszukiwanie produktów według zdjęcia pomaga rozpoznać fason, ale podobny kadr może występować u różnych sprzedawców. Porównywanie linków do produktów zacznij od źródła, pełnej nazwy i wybranego wariantu. Zapisz datę sprawdzenia oraz to, czego jeszcze nie udało się ustalić.</p>
+          <ul>
+            <li><strong>Linki Weidian i oferty Taobao:</strong> przed zamówieniem potwierdź obsługę danej platformy w wybranej usłudze zakupowej.</li>
+            <li><strong>Wybór koloru i wersji:</strong> połącz nazwę opcji z odpowiadającą jej fotografią.</li>
+            <li><strong>Aktualność listy produktów:</strong> ponownie sprawdź cenę oraz dostępność przed płatnością.</li>
+            <li><strong>Niedziałający link do produktu:</strong> szukaj nowej oferty, a następnie zweryfikuj wszystkie szczegóły od początku.</li>
+          </ul>
+        </article>
+
+        <article class="article">
+          <span class="article-label">PORADNIK 02 / ROZMIAR I QC</span>
+          <h3>Rozmiary Wemimi: centymetry przed etykietą</h3>
+          <p>Dobór rozmiaru sneakersów wymaga tabeli konkretnego modelu i pomiaru stopy zgodnego z instrukcją sprzedawcy. Porównanie rozmiarów EU i CN traktuj jako pomoc, a nie uniwersalny przelicznik. Przy odzieży dobrym punktem odniesienia jest ubranie, które już dobrze leży.</p>
+          <p>Tabela wymiarów bluzy powinna pozwalać sprawdzić szerokość pod pachami, długość i rękaw. Dopasowanie koszulki oversize oceń na podstawie pomiarów, nie samego zdjęcia modela. Przy spodniach zapisz obwód pasa i długość nogawki; w kompletach sprawdź osobno górę oraz dół.</p>
+          <p>Zdjęcia QC Wemimi warto czytać jak odpowiedzi na konkretne pytania. Kontrola szwów i nadruku wymaga zbliżenia, a weryfikacja metki rozmiarowej nie zastępuje zdjęcia z miarką. Przy czapkach sprawdź regulację, przy biżuterii zapięcie, a przy chustach Hermès lub podobnych dodatkach — wymiary i deklarowany materiał. Jeśli ważnego szczegółu nie widać, poproś o dodatkowe zdjęcie przed akceptacją.</p>
+        </article>
+
+        <article class="article">
+          <span class="article-label">PORADNIK 03 / PACZKA I KOSZT</span>
+          <h3>Poradnik Wemimi: policz zakup razem z dostawą</h3>
+          <p>Szacowanie kosztu przesyłki do Polski zacznij od pełnej zawartości paczki. Cena produktu i transport krajowy to tylko część sumy: sprawdź opłaty pośrednika, pakowanie, dostawę międzynarodową oraz ewentualne należności importowe. Warunki potwierdzaj bezpośrednio w usłudze, z której zamierzasz korzystać.</p>
+          <p>Waga rzeczywista a gabarytowa to istotne rozróżnienie przy porównywaniu tras. Kurtka puchowa lub pudełko na buty mogą zajmować dużo miejsca; sposób naliczania przewoźnika określa wpływ objętości na wycenę. Usunięcie pudełka na buty rozważ dopiero po ocenie potrzebnej ochrony zawartości.</p>
+          <p>Przed wysyłką sprawdź zasady zwrotu do sprzedawcy, zakres ewentualnej kontroli jakości i ograniczenia przewozowe. Nie zakładaj stałego terminu doręczenia ani identycznych opłat dla różnych adresów. Zachowaj ofertę, potwierdzenie wybranego wariantu i końcową wycenę.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="comparison">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">04 / Lista do sprawdzenia</p>
+          <h2 id="comparison">Co porównać w każdej kategorii?</h2>
+        </div>
+        <p>Własny arkusz porównawczy jest najbardziej użyteczny, gdy zapisujesz konkretne odpowiedzi i brakujące informacje.</p>
+      </div>
+
+      <div class="table-shell">
+        <table>
+          <caption>Praktyczna checklista przed wyborem produktu</caption>
+          <thead>
+            <tr>
+              <th scope="col">Kategoria</th>
+              <th scope="col">Dane do zapisania</th>
+              <th scope="col">Zdjęcie lub informacja do sprawdzenia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Buty i sneakersy</th>
+              <td>Model, wariant, rozmiar i zalecana długość stopy.</td>
+              <td>Profil podeszwy, czubek, metka oraz zgodność obu butów.</td>
+            </tr>
+            <tr>
+              <th scope="row">Bluzy, koszulki, kurtki</th>
+              <td>Szerokość, długość, rękaw i deklarowany skład.</td>
+              <td>Pomiar z miarką, szwy, nadruk i zamki.</td>
+            </tr>
+            <tr>
+              <th scope="row">Spodnie i komplety</th>
+              <td>Pas, nogawka oraz osobne wymiary każdej części.</td>
+              <td>Krój, kieszenie, wykończenie i zgodność kolorów.</td>
+            </tr>
+            <tr>
+              <th scope="row">Czapki i chusty</th>
+              <td>Obwód, regulacja, wymiary i opis materiału.</td>
+              <td>Daszek, zapięcie, haft i wykończenie krawędzi.</td>
+            </tr>
+            <tr>
+              <th scope="row">Biżuteria i akcesoria</th>
+              <td>Długość, szerokość, skład według sprzedawcy.</td>
+              <td>Zapięcie, łączenia, skala detalu i stan powierzchni.</td>
+            </tr>
+            <tr>
+              <th scope="row">Bielizna i koszulki sportowe</th>
+              <td>Wymiary, wybrany wariant i zasady zwrotu.</td>
+              <td>Metka, obszycie, nadruki i ewentualna personalizacja.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section faq-grid" aria-labelledby="faq">
+      <div>
+        <p class="eyebrow">05 / Krótkie odpowiedzi</p>
+        <h2 id="faq">Wemimi spreadsheet — pytania przed zakupem.</h2>
+      </div>
+      <div>
+        <details open>
+          <summary>Co oznacza Wemimi spreadsheet?</summary>
+          <p>To hasło używane przy wyszukiwaniu uporządkowanych list produktów i linków. Ta strona jest niezależnym przewodnikiem po porównywaniu ofert; nie udostępnia pliku Excel ani Arkusza Google.</p>
+        </details>
+        <details>
+          <summary>Dokąd prowadzą odnośniki na tej stronie?</summary>
+          <p>Odnośniki kategorii otwierają odpowiednie działy na hipobuyfind.com. Pozostałe odnośniki otwierają stronę główną www.hipobuyfind.com. Nie jest to strona zamówień Wemimi.</p>
+        </details>
+        <details>
+          <summary>Jak dobrać rozmiar butów i odzieży?</summary>
+          <p>Porównaj tabelę konkretnej oferty z własnymi pomiarami. Dla butów sprawdź długość stopy i zalecenia sprzedawcy; dla odzieży szerokość, długość oraz sposób wykonania pomiaru. Sama etykieta EU lub M nie wystarcza.</p>
+        </details>
+        <details>
+          <summary>Czy zdjęcia QC potwierdzają autentyczność?</summary>
+          <p>Nie. Zdjęcia QC pomagają ocenić widoczne cechy, stan i zgodność wariantu. Nie potwierdzają samodzielnie autentyczności, składu materiału ani trwałości produktu.</p>
+        </details>
+        <details>
+          <summary>Jak obliczyć pełny koszt dostawy do Polski?</summary>
+          <p>Zsumuj cenę wybranego wariantu, transport krajowy, opłaty usługi, pakowanie, przesyłkę międzynarodową i ewentualne podatki lub należności importowe. Sprawdź aktualną wycenę dla adresu docelowego i wymiarów paczki.</p>
+        </details>
+        <details>
+          <summary>Co zrobić, gdy link do produktu nie działa?</summary>
+          <p>Wróć do kategorii i poszukaj produktu według modelu lub zdjęcia. Porównaj nową ofertę od początku: podobna fotografia nie oznacza tego samego sprzedawcy, wariantu ani jakości.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="next">
+      <div>
+        <h2 id="next">Wybierz kategorię. Zachowaj szczegóły.</h2>
+        <p>Przejdź do HipobuyFind, porównaj interesujące Cię oferty i wróć do swojej listy pomiarów przed podjęciem decyzji.</p>
+      </div>
+      <a class="button" href="https://www.hipobuyfind.com">Przeglądaj HipobuyFind <span aria-hidden="true">↗</span></a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <a class="brand" href="https://www.hipobuyfind.com">hipobuyfind<span>.com</span></a>
+      <p>Niezależny przewodnik informacyjny dla osób szukających Wemimi spreadsheet. Ta strona nie przyjmuje płatności, nie realizuje zamówień i nie reprezentuje Wemimi ani właścicieli marek. Dostępność, specyfikacje i warunki zakupu sprawdzaj w aktualnej ofercie.</p>
+    </div>
+    <p class="editorial">Zakres publikacji: odkrywanie kategorii, porównywanie wariantów, pomiary, zdjęcia QC i planowanie kosztu. Ilustracje mają charakter poglądowy.</p>
+  </div>
+</footer>
+</body>
+</html>
